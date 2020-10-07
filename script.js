@@ -41,12 +41,11 @@ function randomPalette() {
     var distancia = 360 / 5;
     //valor por defecto para usar en la saturacion y brillo
     var sbPuntoInicio = Math.random();
-    var rgb, hexa;
-    var colors = [];
-
+    var rgb;
+    console.log("saturacion; " + sbPuntoInicio)
     for (var i = 0; i < 5; i++) {
         //se dejan saturacion y brillo como constante
-        rgb = hsvToRgb((puntoInicio / 359), 0.5, 0.5);
+        rgb = hsvToRgb((puntoInicio / 359), sbPuntoInicio, sbPuntoInicio);
         //se redondea dado que la funcion retorna numeros decimales
         rgb = [Math.floor(rgb[0]), Math.floor(rgb[1]), Math.floor(rgb[2])];
         coloresPaleta.push(rgb);
